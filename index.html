@@ -1,590 +1,966 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!DOCTYPE html>
+
 <html>
+
+
+
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2113.5">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.3px Courier; color: #414141; -webkit-text-stroke: #414141}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.3px Courier; color: #83009d; -webkit-text-stroke: #83009d}
-    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.3px Courier; color: #000000; -webkit-text-stroke: #000000}
-    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.3px Courier; color: #0000ff; -webkit-text-stroke: #0000ff}
-    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.3px Courier; color: #1c680e; -webkit-text-stroke: #1c680e}
-    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.3px Courier; color: #0a009d; -webkit-text-stroke: #0a009d}
-    p.p7 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.3px Courier; color: #4e0062; -webkit-text-stroke: #4e0062}
-    p.p8 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.3px Courier; color: #865108; -webkit-text-stroke: #865108}
-    p.p9 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.3px Courier; color: #840015; -webkit-text-stroke: #840015}
-    p.p10 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.3px Courier; color: #000000; -webkit-text-stroke: #000000; min-height: 16.0px}
-    span.s1 {font-kerning: none}
-    span.s2 {font-kerning: none; color: #000000; -webkit-text-stroke: 0px #000000}
-    span.s3 {font-kerning: none; color: #83009d; -webkit-text-stroke: 0px #83009d}
-    span.s4 {font-kerning: none; color: #1c680e; -webkit-text-stroke: 0px #1c680e}
-    span.s5 {font-kerning: none; color: #0000ff; -webkit-text-stroke: 0px #0000ff}
-    span.s6 {font-kerning: none; color: #414141; -webkit-text-stroke: 0px #414141}
-    span.s7 {font-kerning: none; color: #4e0062; -webkit-text-stroke: 0px #4e0062}
-    span.s8 {font-kerning: none; color: #1d7674; -webkit-text-stroke: 0px #1d7674}
-    span.s9 {font-kerning: none; color: #0a009d; -webkit-text-stroke: 0px #0a009d}
-    span.s10 {font-kerning: none; color: #840015; -webkit-text-stroke: 0px #840015}
-    span.s11 {font-kerning: none; color: #865108; -webkit-text-stroke: 0px #865108}
-  </style>
+
+<title>Shrikant Chand</title>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=3">
+
+<style>
+
+* {
+
+  box-sizing: border-box;
+
+}
+
+
+
+html, body {
+
+  overflow: hidden;
+
+  min-height: 100%;
+
+  min-height: -webkit-fill-available;
+
+  min-height: -moz-available;
+
+  width: 100%;
+
+  position: fixed;
+
+}
+
+
+
+
+
+body {
+
+  margin: 0px;
+
+  background-color: rgba(221, 99, 71, 0.5);
+
+  font-family: Helvatica, sans-serif;
+
+}
+
+
+
+a:link, a:visited {
+
+  color: black;
+
+  text-decoration: underline;
+
+}
+
+
+
+a:hover {
+
+  text-decoration: underline;
+
+  text-decoration-style: double;
+
+}
+
+
+
+h1 {
+
+  margin: 1;
+
+  font-size: 5vw;
+
+  line-height: 0.3em;
+
+}
+
+
+
+h3 {
+
+  margin: 0 0 0 0;
+
+}
+
+
+
+.menuframe {
+
+  overflow: hidden;
+
+  position: relative;
+
+}
+
+
+
+.menu {
+
+  background-color: #fff;
+
+  border: 0px solid;
+
+  border-radius: 8px;
+
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+
+  padding: 3px 0 3px 0;
+
+  margin-top: 0.5em;
+
+  margin-bottom: 0.8em;
+
+  text-align: center;
+
+  letter-spacing: -0.05em;
+
+  font-size: 2.7vw;
+
+  margin-right: 1.5vw;
+
+}
+
+
+
+.menu:hover {
+
+  background-color:LightGray;
+
+}
+
+
+
+
+
+.namecol {
+
+  width: 100%;
+
+}
+
+
+
+.photoframe{
+
+  background-color: rgba(0,0,185,0);
+
+}
+
+
+
+.photoframe img{
+
+  display: block;
+
+}
+
+
+
+.photo {
+
+  border-radius: 50%;
+
+  width: 100%;
+
+}
+
+
+
+.nametag {
+
+  padding: 0 0 0 0;
+
+  text-align: center;
+
+}
+
+
+
+.intro {
+
+  padding: 0 0 0 0;
+
+  font-size: 3vw;
+
+}
+
+
+
+.info {
+
+  margin-bottom: 0px;
+
+  padding: 8px 8px 0px 8px;
+
+  min-height: 100%;
+
+}
+
+
+
+.main {
+
+  background-color: #fff;
+
+  border: 0px solid;
+
+  border-radius: 0px;
+
+  padding: 10px 10px 10px 10px;
+
+  margin: 0px;
+
+  font-size: 15px;
+
+  line-height: 1.5;
+
+  height: 90vh;
+
+  overflow: auto;
+
+  position: relative;
+
+}
+
+
+
+.datetag {
+
+  position: absolute;
+
+  right: 10px;
+
+}
+
+
+
+/* table attributes */
+
+table {
+
+  border-collapse: collapse;
+
+  }
+
+td, th {
+
+  border-bottom: 1px solid #dddddd;
+
+  text-align: left;
+
+  padding: 3px;
+
+}
+
+
+
+/* width */
+
+::-webkit-scrollbar {
+
+  width: 8px;
+
+}
+
+
+
+/* Track */
+
+::-webkit-scrollbar-track {
+
+  background: #f1f1f1;
+
+}
+
+ 
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+
+  background: #acacac;
+
+  border-radius: 10px;
+
+}
+
+
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+
+  background: #888;
+
+}
+
+
+
+/* horizontal rule attributes*/
+
+hr {
+
+  border-width: 1px;
+
+  visibility: hidden;
+
+}
+
+
+
+/* list attributes*/
+
+ul {
+
+ margin: 0 0 0 20px;
+
+ padding-left: 0px;
+
+}
+
+
+
+li{
+
+  margin: 0px 0;
+
+}
+
+
+
+.ul-1 {
+
+  padding: 5px 0 5px 0;
+
+}
+
+
+
+
+
+.ul-2 {
+
+  padding: 20px 0 0 0;
+
+}
+
+
+
+.ul-3 {
+
+  padding: 0 0 20px 0;
+
+}
+
+
+
+.ul-4 {
+
+  padding: 20px 0 20px 0;
+
+}
+
+
+
+/* For mobile phones: */
+
+
+
+
+
+[class*="col-"] {
+
+  float: left;
+
+}
+
+.col-1 {width: 100%; margin-bottom: 30px} /* table 1 */
+
+.col-2 {width: 11.5%;}  /* menu items */
+
+.col-3 {width: 100%;} /* menuframe */
+
+.col-4 {width: 100%; margin-bottom: 50px} /* table 2 */
+
+.col-5 {width: 100%;} /* main */
+
+.col-6 {width: 100%; margin-bottom: 300px} /* table 3 */
+
+.col-7 {width: 40%; margin-right:100%} /* photoframe */
+
+.col-8 {width: 100%;} /* info */
+
+.col-9 {width: 100%;} /* main contents */
+
+.col-10 {width: 100%;} /* photo inner frame */
+
+.col-11 {width: 100%;} /* namecol */
+
+.col-12 {width: 10%;} /* intro */
+
+
+
+
+
+@media only screen and (min-width: 550px) {
+
+
+
+  h1 {
+
+    font-size: 3vw;
+
+  }
+
+  .menu {
+
+    font-size: 2vw;
+
+  }
+
+  .intro {
+
+    padding: 4.5vw 0 0 3vw;
+
+    font-size: 2vw;
+
+  }
+
+  .namecol {
+
+    padding-top: 10px;
+
+    display: flex;
+
+    align-items: stretch;
+
+  }
+
+  .info {
+
+    border-radius: 0 18px 18px 0;
+
+  }
+
+
+
+  .col-1 {width: 80%; margin-right: 100%;} /* table 1 */
+
+  .col-2 {width: 10%;}  /* menu items */
+
+  .col-3 {width: 100%;} /* menuframe */
+
+  .col-4 {width: 100%; margin-bottom: 50px} /* table 2 */
+
+  .col-5 {width: 100%;} /* main */
+
+  .col-6 {width: 80%; margin-bottom: 300px} /* table 3 */
+
+  .col-7 {width: 20%; margin-right:0} /* photoframe */
+
+  .col-8 {width: 40%;} /* info */
+
+  .col-9 {width: 100%;} /* main contents */
+
+  .col-10 {width: 100%;} /* photo inner frame */
+
+  .col-11 {width: 100%;} /* namecol */
+
+  .col-12 {width: 10%;} /* intro */
+
+}
+
+
+
+
+
+
+
+@media only screen and (min-width: 1005px) {
+
+  /* For desktop: */
+
+
+
+  h1 {
+
+    font-size: 2vw;
+
+  }
+
+
+
+  .main {
+
+  margin-top: 0px;
+
+  height: 100vh;
+
+  font-size: 15px;
+
+  padding: 10px 45px 10px 30px;
+
+  }
+
+  .menuframe {
+
+  padding-top: 10px;
+
+  padding-left: 10px;
+
+  height: 100vh;
+
+  }
+
+  .menu {
+
+  font-size: 18px;
+
+  margin-top: 0em;
+
+  margin-bottom: 0.7em;
+
+  }
+
+  .intro {
+
+  padding: 0px;
+
+  font-size: 1vw;
+
+  }
+
+  .info {
+
+  padding-left: 15px;
+
+  }
+
+
+
+  .col-1 {width: 80%; margin-right: 100%;}
+
+  .col-2 {width: 92%;}
+
+  .col-3 {width: 15%;}
+
+  .col-4 {width: 100%; margin-bottom: 50px; margin-right: 100%;}
+
+  .col-5 {width: 70%;}
+
+  .col-6 {width: 70%; margin-bottom: 350px; margin-right: 100%;}
+
+  .col-7 {width: 18%;}
+
+  .col-8 {width: 45%;}
+
+  .col-9 {width: 100%;}
+
+  .col-10 {width:100%;}
+
+  .col-11 {width: 100%;}
+
+  .col-12 {width: 10%;}
+
+}
+
+
+
+@media print {
+
+    .main {
+
+        overflow: visible;
+
+    }
+
+    .menuframe {
+
+    display: none;
+
+    }
+
+    html, body {
+
+        overflow: visible;
+
+  position: relative;
+
+    }
+
+}
+
+
+
+
+
+
+
+</style>
+
+
+
+<!-- Mathjax -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_HTML"></script>
+
+    <script type="text/x-mathjax-config">
+
+    MathJax.Hub.Config({
+
+        tex2jax: {
+
+            inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+
+            displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+
+            processEscapes: true,
+
+            processEnvironments: true
+
+        },
+
+        // Center justify equations in code and markdown cells. Elsewhere
+
+        // we use CSS to left justify single line equations in code cells.
+
+        displayAlign: 'center',
+
+        "HTML-CSS": {
+
+            styles: {'.MathJax_Display': {"margin": 0}},
+
+            linebreaks: { automatic: true }
+
+        }
+
+    });
+
+    </script>
+
+<!-- Mathjax -->
+
+
+
 </head>
+
+
+
+
+
 <body>
-<p class="p1"><span class="s1">&lt;!DOCTYPE html&gt;</span></p>
-<p class="p2"><span class="s2">&lt;</span><span class="s1">html</span><span class="s2">&gt;</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p2"><span class="s2">&lt;</span><span class="s1">head</span><span class="s2">&gt;</span></p>
-<p class="p3"><span class="s1">&lt;</span><span class="s3">title</span><span class="s1">&gt;Shrikant Chand&lt;/</span><span class="s3">title</span><span class="s1">&gt;</span></p>
-<p class="p4"><span class="s2">&lt;</span><span class="s3">meta </span><span class="s1">charset</span><span class="s2">=</span><span class="s4">"UTF-8"</span><span class="s2">&gt;</span></p>
-<p class="p5"><span class="s2">&lt;</span><span class="s3">meta </span><span class="s5">name</span><span class="s2">=</span><span class="s1">"viewport" </span><span class="s5">content</span><span class="s2">=</span><span class="s1">"width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=3"</span><span class="s2">&gt;</span></p>
-<p class="p2"><span class="s2">&lt;</span><span class="s1">style</span><span class="s2">&gt;</span></p>
-<p class="p1"><span class="s1">* {</span></p>
-<p class="p3"><span class="s6">  </span><span class="s1">box-sizing</span><span class="s6">: </span><span class="s7">border-box</span><span class="s6">;</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p6"><span class="s1">html</span><span class="s6">, </span><span class="s1">body </span><span class="s6">{</span></p>
-<p class="p3"><span class="s6">  </span><span class="s1">overflow</span><span class="s6">: </span><span class="s7">hidden</span><span class="s6">;</span></p>
-<p class="p3"><span class="s6">  </span><span class="s1">min-height</span><span class="s6">: </span><span class="s4">100%</span><span class="s6">;</span></p>
-<p class="p7"><span class="s6">  </span><span class="s2">min-height</span><span class="s6">: </span><span class="s1">-webkit-fill-available</span><span class="s6">;</span></p>
-<p class="p7"><span class="s6">  </span><span class="s2">min-height</span><span class="s6">: </span><span class="s1">-moz-available</span><span class="s6">;</span></p>
-<p class="p1"><span class="s1">  </span><span class="s2">width</span><span class="s1">: </span><span class="s4">100%</span><span class="s1">;</span></p>
-<p class="p3"><span class="s6">  </span><span class="s1">position</span><span class="s6">: </span><span class="s7">fixed</span><span class="s6">;</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p6"><span class="s1">body </span><span class="s6">{</span></p>
-<p class="p3"><span class="s6">  </span><span class="s1">margin</span><span class="s6">: </span><span class="s4">0px</span><span class="s6">;</span></p>
-<p class="p3"><span class="s6">  </span><span class="s1">background-color</span><span class="s6">: </span><span class="s7">rgba(221</span><span class="s6">, </span><span class="s4">99</span><span class="s6">, </span><span class="s4">71</span><span class="s6">, </span><span class="s4">0.5</span><span class="s7">)</span><span class="s6">;</span></p>
-<p class="p7"><span class="s6">  </span><span class="s2">font-family</span><span class="s6">: </span><span class="s1">Helvatica</span><span class="s6">, </span><span class="s1">sans-serif</span><span class="s6">;</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p6"><span class="s1">a</span><span class="s6">:</span><span class="s1">link</span><span class="s6">, </span><span class="s1">a</span><span class="s6">:</span><span class="s1">visited </span><span class="s6">{</span></p>
-<p class="p1"><span class="s1">  </span><span class="s2">color</span><span class="s1">: </span><span class="s7">black</span><span class="s1">;</span></p>
-<p class="p3"><span class="s6">  </span><span class="s1">text-decoration</span><span class="s6">: </span><span class="s7">underline</span><span class="s6">;</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p6"><span class="s1">a</span><span class="s6">:</span><span class="s1">hover </span><span class="s6">{</span></p>
-<p class="p3"><span class="s6">  </span><span class="s1">text-decoration</span><span class="s6">: </span><span class="s7">underline</span><span class="s6">;</span></p>
-<p class="p3"><span class="s6">  </span><span class="s1">text-decoration-style</span><span class="s6">: </span><span class="s7">double</span><span class="s6">;</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p6"><span class="s1">h1 </span><span class="s6">{</span></p>
-<p class="p3"><span class="s6">  </span><span class="s1">margin</span><span class="s6">: </span><span class="s4">1</span><span class="s6">;</span></p>
-<p class="p3"><span class="s6">  </span><span class="s1">font-size</span><span class="s6">: </span><span class="s4">5vw</span><span class="s6">;</span></p>
-<p class="p3"><span class="s6">  </span><span class="s1">line-height</span><span class="s6">: </span><span class="s4">0.3em</span><span class="s6">;</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p6"><span class="s1">h3 </span><span class="s6">{</span></p>
-<p class="p5"><span class="s6">  </span><span class="s2">margin</span><span class="s6">: </span><span class="s1">0 0 0 0</span><span class="s6">;</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p6"><span class="s6">.</span><span class="s1">menuframe </span><span class="s6">{</span></p>
-<p class="p3"><span class="s6">  </span><span class="s1">overflow</span><span class="s6">: </span><span class="s7">hidden</span><span class="s6">;</span></p>
-<p class="p3"><span class="s6">  </span><span class="s1">position</span><span class="s6">: </span><span class="s7">relative</span><span class="s6">;</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p6"><span class="s6">.</span><span class="s1">menu </span><span class="s6">{</span></p>
-<p class="p3"><span class="s6">  </span><span class="s1">background-color</span><span class="s6">: </span><span class="s8">#fff</span><span class="s6">;</span></p>
-<p class="p3"><span class="s6">  </span><span class="s1">border</span><span class="s6">: </span><span class="s4">0px </span><span class="s7">solid</span><span class="s6">;</span></p>
-<p class="p3"><span class="s6">  </span><span class="s1">border-radius</span><span class="s6">: </span><span class="s4">8px</span><span class="s6">;</span></p>
-<p class="p5"><span class="s6">  </span><span class="s2">box-shadow</span><span class="s6">: </span><span class="s1">5px 5px 5px </span><span class="s7">rgba(0</span><span class="s6">,</span><span class="s1">0</span><span class="s6">,</span><span class="s1">0</span><span class="s6">,</span><span class="s1">0.5</span><span class="s7">)</span><span class="s6">;</span></p>
-<p class="p5"><span class="s6">  </span><span class="s2">padding</span><span class="s6">: </span><span class="s1">3px 0 3px 0</span><span class="s6">;</span></p>
-<p class="p3"><span class="s6">  </span><span class="s1">margin-top</span><span class="s6">: </span><span class="s4">0.5em</span><span class="s6">;</span></p>
-<p class="p3"><span class="s6">  </span><span class="s1">margin-bottom</span><span class="s6">: </span><span class="s4">0.8em</span><span class="s6">;</span></p>
-<p class="p3"><span class="s6">  </span><span class="s1">text-align</span><span class="s6">: </span><span class="s7">center</span><span class="s6">;</span></p>
-<p class="p3"><span class="s6">  </span><span class="s1">letter-spacing</span><span class="s6">: </span><span class="s7">-0</span><span class="s6">.</span><span class="s4">05em</span><span class="s6">;</span></p>
-<p class="p3"><span class="s6">  </span><span class="s1">font-size</span><span class="s6">: </span><span class="s4">2.7vw</span><span class="s6">;</span></p>
-<p class="p3"><span class="s6">  </span><span class="s1">margin-right</span><span class="s6">: </span><span class="s4">1.5vw</span><span class="s6">;</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p6"><span class="s6">.</span><span class="s1">menu</span><span class="s6">:</span><span class="s1">hover </span><span class="s6">{</span></p>
-<p class="p3"><span class="s6">  </span><span class="s1">background-color</span><span class="s6">:</span><span class="s7">LightGray</span><span class="s6">;</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p6"><span class="s6">.</span><span class="s1">namecol </span><span class="s6">{</span></p>
-<p class="p1"><span class="s1">  </span><span class="s2">width</span><span class="s1">: </span><span class="s4">100%</span><span class="s1">;</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p6"><span class="s6">.</span><span class="s1">photoframe</span><span class="s6">{</span></p>
-<p class="p3"><span class="s6">  </span><span class="s1">background-color</span><span class="s6">: </span><span class="s7">rgba(0</span><span class="s6">,</span><span class="s4">0</span><span class="s6">,</span><span class="s4">185</span><span class="s6">,</span><span class="s4">0</span><span class="s7">)</span><span class="s6">;</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p6"><span class="s6">.</span><span class="s1">photoframe img</span><span class="s6">{</span></p>
-<p class="p3"><span class="s6">  </span><span class="s1">display</span><span class="s6">: </span><span class="s7">block</span><span class="s6">;</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p6"><span class="s6">.</span><span class="s1">photo </span><span class="s6">{</span></p>
-<p class="p3"><span class="s6">  </span><span class="s1">border-radius</span><span class="s6">: </span><span class="s4">50%</span><span class="s6">;</span></p>
-<p class="p1"><span class="s1">  </span><span class="s2">width</span><span class="s1">: </span><span class="s4">100%</span><span class="s1">;</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p6"><span class="s6">.</span><span class="s1">nametag </span><span class="s6">{</span></p>
-<p class="p3"><span class="s6">  </span><span class="s1">padding</span><span class="s6">: </span><span class="s4">0 0 0 0</span><span class="s6">;</span></p>
-<p class="p3"><span class="s6">  </span><span class="s1">text-align</span><span class="s6">: </span><span class="s7">center</span><span class="s6">;</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p6"><span class="s6">.</span><span class="s1">intro </span><span class="s6">{</span></p>
-<p class="p3"><span class="s6">  </span><span class="s1">padding</span><span class="s6">: </span><span class="s4">0 0 0 0</span><span class="s6">;</span></p>
-<p class="p3"><span class="s6">  </span><span class="s1">font-size</span><span class="s6">: </span><span class="s4">3vw</span><span class="s6">;</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p6"><span class="s6">.</span><span class="s1">info </span><span class="s6">{</span></p>
-<p class="p3"><span class="s6">  </span><span class="s1">margin-bottom</span><span class="s6">: </span><span class="s4">0px</span><span class="s6">;</span></p>
-<p class="p5"><span class="s6">  </span><span class="s2">padding</span><span class="s6">: </span><span class="s1">8px 8px 0px 8px</span><span class="s6">;</span></p>
-<p class="p3"><span class="s6">  </span><span class="s1">min-height</span><span class="s6">: </span><span class="s4">100%</span><span class="s6">;</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p6"><span class="s6">.</span><span class="s1">main </span><span class="s6">{</span></p>
-<p class="p3"><span class="s6">  </span><span class="s1">background-color</span><span class="s6">: </span><span class="s8">#fff</span><span class="s6">;</span></p>
-<p class="p3"><span class="s6">  </span><span class="s1">border</span><span class="s6">: </span><span class="s4">0px </span><span class="s7">solid</span><span class="s6">;</span></p>
-<p class="p3"><span class="s6">  </span><span class="s1">border-radius</span><span class="s6">: </span><span class="s4">0px</span><span class="s6">;</span></p>
-<p class="p5"><span class="s6">  </span><span class="s2">padding</span><span class="s6">: </span><span class="s1">10px 10px 10px 10px</span><span class="s6">;</span></p>
-<p class="p3"><span class="s6">  </span><span class="s1">margin</span><span class="s6">: </span><span class="s4">0px</span><span class="s6">;</span></p>
-<p class="p3"><span class="s6">  </span><span class="s1">font-size</span><span class="s6">: </span><span class="s4">15px</span><span class="s6">;</span></p>
-<p class="p3"><span class="s6">  </span><span class="s1">line-height</span><span class="s6">: </span><span class="s4">1.5</span><span class="s6">;</span></p>
-<p class="p3"><span class="s6">  </span><span class="s1">height</span><span class="s6">: </span><span class="s4">90vh</span><span class="s6">;</span></p>
-<p class="p3"><span class="s6">  </span><span class="s1">overflow</span><span class="s6">: </span><span class="s7">auto</span><span class="s6">;</span></p>
-<p class="p3"><span class="s6">  </span><span class="s1">position</span><span class="s6">: </span><span class="s7">relative</span><span class="s6">;</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p6"><span class="s6">.</span><span class="s1">datetag </span><span class="s6">{</span></p>
-<p class="p3"><span class="s6">  </span><span class="s1">position</span><span class="s6">: </span><span class="s7">absolute</span><span class="s6">;</span></p>
-<p class="p1"><span class="s1">  </span><span class="s2">right</span><span class="s1">: </span><span class="s4">10px</span><span class="s1">;</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p8"><span class="s1">/* table attributes */</span></p>
-<p class="p6"><span class="s1">table </span><span class="s6">{</span></p>
-<p class="p3"><span class="s6">  </span><span class="s1">border-collapse</span><span class="s6">: </span><span class="s7">collapse</span><span class="s6">;</span></p>
-<p class="p1"><span class="s1">  }</span></p>
-<p class="p6"><span class="s1">td</span><span class="s6">, </span><span class="s1">th </span><span class="s6">{</span></p>
-<p class="p3"><span class="s6">  </span><span class="s1">border-bottom</span><span class="s6">: </span><span class="s4">1px </span><span class="s7">solid </span><span class="s8">#dddddd</span><span class="s6">;</span></p>
-<p class="p3"><span class="s6">  </span><span class="s1">text-align</span><span class="s6">: </span><span class="s7">left</span><span class="s6">;</span></p>
-<p class="p3"><span class="s6">  </span><span class="s1">padding</span><span class="s6">: </span><span class="s4">3px</span><span class="s6">;</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p8"><span class="s1">/* width */</span></p>
-<p class="p6"><span class="s6">::</span><span class="s1">-webkit-scrollbar </span><span class="s6">{</span></p>
-<p class="p1"><span class="s1">  </span><span class="s2">width</span><span class="s1">: </span><span class="s4">8px</span><span class="s1">;</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p8"><span class="s1">/* Track */</span></p>
-<p class="p6"><span class="s6">::</span><span class="s1">-webkit-scrollbar-track </span><span class="s6">{</span></p>
-<p class="p3"><span class="s6">  </span><span class="s1">background</span><span class="s6">: </span><span class="s8">#f1f1f1</span><span class="s6">;</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p1"><span class="s1"> </span></p>
-<p class="p8"><span class="s1">/* Handle */</span></p>
-<p class="p6"><span class="s6">::</span><span class="s1">-webkit-scrollbar-thumb </span><span class="s6">{</span></p>
-<p class="p3"><span class="s6">  </span><span class="s1">background</span><span class="s6">: </span><span class="s8">#acacac</span><span class="s6">;</span></p>
-<p class="p3"><span class="s6">  </span><span class="s1">border-radius</span><span class="s6">: </span><span class="s4">10px</span><span class="s6">;</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p8"><span class="s1">/* Handle on hover */</span></p>
-<p class="p6"><span class="s6">::</span><span class="s1">-webkit-scrollbar-thumb</span><span class="s6">:</span><span class="s1">hover </span><span class="s6">{</span></p>
-<p class="p3"><span class="s6">  </span><span class="s1">background</span><span class="s6">: </span><span class="s8">#888</span><span class="s6">;</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p8"><span class="s1">/* horizontal rule attributes*/</span></p>
-<p class="p6"><span class="s1">hr </span><span class="s6">{</span></p>
-<p class="p3"><span class="s6">  </span><span class="s1">border-width</span><span class="s6">: </span><span class="s4">1px</span><span class="s6">;</span></p>
-<p class="p3"><span class="s6">  </span><span class="s1">visibility</span><span class="s6">: </span><span class="s7">hidden</span><span class="s6">;</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p8"><span class="s1">/* list attributes*/</span></p>
-<p class="p6"><span class="s1">ul </span><span class="s6">{</span></p>
-<p class="p5"><span class="s6"> </span><span class="s2">margin</span><span class="s6">: </span><span class="s1">0 0 0 20px</span><span class="s6">;</span></p>
-<p class="p3"><span class="s6"> </span><span class="s1">padding-left</span><span class="s6">: </span><span class="s4">0px</span><span class="s6">;</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p6"><span class="s1">li</span><span class="s6">{</span></p>
-<p class="p3"><span class="s6">  </span><span class="s1">margin</span><span class="s6">: </span><span class="s4">0px 0</span><span class="s6">;</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p6"><span class="s6">.</span><span class="s1">ul-1 </span><span class="s6">{</span></p>
-<p class="p5"><span class="s6">  </span><span class="s2">padding</span><span class="s6">: </span><span class="s1">5px 0 5px 0</span><span class="s6">;</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p6"><span class="s6">.</span><span class="s1">ul-2 </span><span class="s6">{</span></p>
-<p class="p5"><span class="s6">  </span><span class="s2">padding</span><span class="s6">: </span><span class="s1">20px 0 0 0</span><span class="s6">;</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p6"><span class="s6">.</span><span class="s1">ul-3 </span><span class="s6">{</span></p>
-<p class="p5"><span class="s6">  </span><span class="s2">padding</span><span class="s6">: </span><span class="s1">0 0 20px 0</span><span class="s6">;</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p6"><span class="s6">.</span><span class="s1">ul-4 </span><span class="s6">{</span></p>
-<p class="p5"><span class="s6">  </span><span class="s2">padding</span><span class="s6">: </span><span class="s1">20px 0 20px 0</span><span class="s6">;</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p8"><span class="s1">/* For mobile phones: */</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p1"><span class="s1">[</span><span class="s9">class</span><span class="s1">*=</span><span class="s10">"col-"</span><span class="s1">] {</span></p>
-<p class="p1"><span class="s1">  </span><span class="s2">float</span><span class="s1">: </span><span class="s7">left</span><span class="s1">;</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p3"><span class="s6">.</span><span class="s9">col-1 </span><span class="s6">{</span><span class="s1">width</span><span class="s6">: </span><span class="s4">100%</span><span class="s6">; </span><span class="s1">margin-bottom</span><span class="s6">: </span><span class="s4">30px</span><span class="s6">} </span><span class="s11">/* table 1 */</span></p>
-<p class="p8"><span class="s6">.</span><span class="s9">col-2 </span><span class="s6">{</span><span class="s2">width</span><span class="s6">: </span><span class="s4">11.5%</span><span class="s6">;}  </span><span class="s1">/* menu items */</span></p>
-<p class="p8"><span class="s6">.</span><span class="s9">col-3 </span><span class="s6">{</span><span class="s2">width</span><span class="s6">: </span><span class="s4">100%</span><span class="s6">;} </span><span class="s1">/* menuframe */</span></p>
-<p class="p3"><span class="s6">.</span><span class="s9">col-4 </span><span class="s6">{</span><span class="s1">width</span><span class="s6">: </span><span class="s4">100%</span><span class="s6">; </span><span class="s1">margin-bottom</span><span class="s6">: </span><span class="s4">50px</span><span class="s6">} </span><span class="s11">/* table 2 */</span></p>
-<p class="p8"><span class="s6">.</span><span class="s9">col-5 </span><span class="s6">{</span><span class="s2">width</span><span class="s6">: </span><span class="s4">100%</span><span class="s6">;} </span><span class="s1">/* main */</span></p>
-<p class="p3"><span class="s6">.</span><span class="s9">col-6 </span><span class="s6">{</span><span class="s1">width</span><span class="s6">: </span><span class="s4">100%</span><span class="s6">; </span><span class="s1">margin-bottom</span><span class="s6">: </span><span class="s4">300px</span><span class="s6">} </span><span class="s11">/* table 3 */</span></p>
-<p class="p3"><span class="s6">.</span><span class="s9">col-7 </span><span class="s6">{</span><span class="s1">width</span><span class="s6">: </span><span class="s4">40%</span><span class="s6">; </span><span class="s1">margin-right</span><span class="s6">:</span><span class="s4">100%</span><span class="s6">} </span><span class="s11">/* photoframe */</span></p>
-<p class="p8"><span class="s6">.</span><span class="s9">col-8 </span><span class="s6">{</span><span class="s2">width</span><span class="s6">: </span><span class="s4">100%</span><span class="s6">;} </span><span class="s1">/* info */</span></p>
-<p class="p8"><span class="s6">.</span><span class="s9">col-9 </span><span class="s6">{</span><span class="s2">width</span><span class="s6">: </span><span class="s4">100%</span><span class="s6">;} </span><span class="s1">/* main contents */</span></p>
-<p class="p8"><span class="s6">.</span><span class="s9">col-10 </span><span class="s6">{</span><span class="s2">width</span><span class="s6">: </span><span class="s4">100%</span><span class="s6">;} </span><span class="s1">/* photo inner frame */</span></p>
-<p class="p8"><span class="s6">.</span><span class="s9">col-11 </span><span class="s6">{</span><span class="s2">width</span><span class="s6">: </span><span class="s4">100%</span><span class="s6">;} </span><span class="s1">/* namecol */</span></p>
-<p class="p8"><span class="s6">.</span><span class="s9">col-12 </span><span class="s6">{</span><span class="s2">width</span><span class="s6">: </span><span class="s4">10%</span><span class="s6">;} </span><span class="s1">/* intro */</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p3"><span class="s7">@media </span><span class="s1">only screen and (min-width</span><span class="s6">: </span><span class="s4">550px</span><span class="s1">) </span><span class="s6">{</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p1"><span class="s1">  </span><span class="s9">h1 </span><span class="s1">{</span></p>
-<p class="p3"><span class="s6">    </span><span class="s1">font-size</span><span class="s6">: </span><span class="s4">3vw</span><span class="s6">;</span></p>
-<p class="p1"><span class="s1">  }</span></p>
-<p class="p6"><span class="s6">  .</span><span class="s1">menu </span><span class="s6">{</span></p>
-<p class="p3"><span class="s6">    </span><span class="s1">font-size</span><span class="s6">: </span><span class="s4">2vw</span><span class="s6">;</span></p>
-<p class="p1"><span class="s1">  }</span></p>
-<p class="p6"><span class="s6">  .</span><span class="s1">intro </span><span class="s6">{</span></p>
-<p class="p5"><span class="s6">    </span><span class="s2">padding</span><span class="s6">: </span><span class="s1">4.5vw 0 0 3vw</span><span class="s6">;</span></p>
-<p class="p3"><span class="s6">    </span><span class="s1">font-size</span><span class="s6">: </span><span class="s4">2vw</span><span class="s6">;</span></p>
-<p class="p1"><span class="s1">  }</span></p>
-<p class="p6"><span class="s6">  .</span><span class="s1">namecol </span><span class="s6">{</span></p>
-<p class="p3"><span class="s6">    </span><span class="s1">padding-top</span><span class="s6">: </span><span class="s4">10px</span><span class="s6">;</span></p>
-<p class="p1"><span class="s1">    </span><span class="s2">display</span><span class="s1">: </span><span class="s7">flex</span><span class="s1">;</span></p>
-<p class="p3"><span class="s6">    </span><span class="s1">align-items</span><span class="s6">: </span><span class="s7">stretch</span><span class="s6">;</span></p>
-<p class="p1"><span class="s1">  }</span></p>
-<p class="p6"><span class="s6">  .</span><span class="s1">info </span><span class="s6">{</span></p>
-<p class="p3"><span class="s6">    </span><span class="s1">border-radius</span><span class="s6">: </span><span class="s4">0 18px 18px 0</span><span class="s6">;</span></p>
-<p class="p1"><span class="s1">  }</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p3"><span class="s6">  .</span><span class="s9">col-1 </span><span class="s6">{</span><span class="s1">width</span><span class="s6">: </span><span class="s4">80%</span><span class="s6">; </span><span class="s1">margin-right</span><span class="s6">: </span><span class="s4">100%</span><span class="s6">;} </span><span class="s11">/* table 1 */</span></p>
-<p class="p8"><span class="s6">  .</span><span class="s9">col-2 </span><span class="s6">{</span><span class="s2">width</span><span class="s6">: </span><span class="s4">10%</span><span class="s6">;}  </span><span class="s1">/* menu items */</span></p>
-<p class="p8"><span class="s6">  .</span><span class="s9">col-3 </span><span class="s6">{</span><span class="s2">width</span><span class="s6">: </span><span class="s4">100%</span><span class="s6">;} </span><span class="s1">/* menuframe */</span></p>
-<p class="p3"><span class="s6">  .</span><span class="s9">col-4 </span><span class="s6">{</span><span class="s1">width</span><span class="s6">: </span><span class="s4">100%</span><span class="s6">; </span><span class="s1">margin-bottom</span><span class="s6">: </span><span class="s4">50px</span><span class="s6">} </span><span class="s11">/* table 2 */</span></p>
-<p class="p8"><span class="s6">  .</span><span class="s9">col-5 </span><span class="s6">{</span><span class="s2">width</span><span class="s6">: </span><span class="s4">100%</span><span class="s6">;} </span><span class="s1">/* main */</span></p>
-<p class="p3"><span class="s6">  .</span><span class="s9">col-6 </span><span class="s6">{</span><span class="s1">width</span><span class="s6">: </span><span class="s4">80%</span><span class="s6">; </span><span class="s1">margin-bottom</span><span class="s6">: </span><span class="s4">300px</span><span class="s6">} </span><span class="s11">/* table 3 */</span></p>
-<p class="p3"><span class="s6">  .</span><span class="s9">col-7 </span><span class="s6">{</span><span class="s1">width</span><span class="s6">: </span><span class="s4">20%</span><span class="s6">; </span><span class="s1">margin-right</span><span class="s6">:</span><span class="s4">0</span><span class="s6">} </span><span class="s11">/* photoframe */</span></p>
-<p class="p8"><span class="s6">  .</span><span class="s9">col-8 </span><span class="s6">{</span><span class="s2">width</span><span class="s6">: </span><span class="s4">40%</span><span class="s6">;} </span><span class="s1">/* info */</span></p>
-<p class="p8"><span class="s6">  .</span><span class="s9">col-9 </span><span class="s6">{</span><span class="s2">width</span><span class="s6">: </span><span class="s4">100%</span><span class="s6">;} </span><span class="s1">/* main contents */</span></p>
-<p class="p8"><span class="s6">  .</span><span class="s9">col-10 </span><span class="s6">{</span><span class="s2">width</span><span class="s6">: </span><span class="s4">100%</span><span class="s6">;} </span><span class="s1">/* photo inner frame */</span></p>
-<p class="p8"><span class="s6">  .</span><span class="s9">col-11 </span><span class="s6">{</span><span class="s2">width</span><span class="s6">: </span><span class="s4">100%</span><span class="s6">;} </span><span class="s1">/* namecol */</span></p>
-<p class="p8"><span class="s6">  .</span><span class="s9">col-12 </span><span class="s6">{</span><span class="s2">width</span><span class="s6">: </span><span class="s4">10%</span><span class="s6">;} </span><span class="s1">/* intro */</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p3"><span class="s7">@media </span><span class="s1">only screen and (min-width</span><span class="s6">: </span><span class="s4">1005px</span><span class="s1">) </span><span class="s6">{</span></p>
-<p class="p8"><span class="s6">  </span><span class="s1">/* For desktop: */</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p1"><span class="s1">  </span><span class="s9">h1 </span><span class="s1">{</span></p>
-<p class="p3"><span class="s6">    </span><span class="s1">font-size</span><span class="s6">: </span><span class="s4">2vw</span><span class="s6">;</span></p>
-<p class="p1"><span class="s1">  }</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p6"><span class="s6">  .</span><span class="s1">main </span><span class="s6">{</span></p>
-<p class="p3"><span class="s6">  </span><span class="s1">margin-top</span><span class="s6">: </span><span class="s4">0px</span><span class="s6">;</span></p>
-<p class="p3"><span class="s6">  </span><span class="s1">height</span><span class="s6">: </span><span class="s4">100vh</span><span class="s6">;</span></p>
-<p class="p3"><span class="s6">  </span><span class="s1">font-size</span><span class="s6">: </span><span class="s4">15px</span><span class="s6">;</span></p>
-<p class="p5"><span class="s6">  </span><span class="s2">padding</span><span class="s6">: </span><span class="s1">10px 45px 10px 30px</span><span class="s6">;</span></p>
-<p class="p1"><span class="s1">  }</span></p>
-<p class="p6"><span class="s6">  .</span><span class="s1">menuframe </span><span class="s6">{</span></p>
-<p class="p3"><span class="s6">  </span><span class="s1">padding-top</span><span class="s6">: </span><span class="s4">10px</span><span class="s6">;</span></p>
-<p class="p3"><span class="s6">  </span><span class="s1">padding-left</span><span class="s6">: </span><span class="s4">10px</span><span class="s6">;</span></p>
-<p class="p3"><span class="s6">  </span><span class="s1">height</span><span class="s6">: </span><span class="s4">100vh</span><span class="s6">;</span></p>
-<p class="p1"><span class="s1">  }</span></p>
-<p class="p6"><span class="s6">  .</span><span class="s1">menu </span><span class="s6">{</span></p>
-<p class="p3"><span class="s6">  </span><span class="s1">font-size</span><span class="s6">: </span><span class="s4">18px</span><span class="s6">;</span></p>
-<p class="p3"><span class="s6">  </span><span class="s1">margin-top</span><span class="s6">: </span><span class="s4">0em</span><span class="s6">;</span></p>
-<p class="p3"><span class="s6">  </span><span class="s1">margin-bottom</span><span class="s6">: </span><span class="s4">0.7em</span><span class="s6">;</span></p>
-<p class="p1"><span class="s1">  }</span></p>
-<p class="p6"><span class="s6">  .</span><span class="s1">intro </span><span class="s6">{</span></p>
-<p class="p3"><span class="s6">  </span><span class="s1">padding</span><span class="s6">: </span><span class="s4">0px</span><span class="s6">;</span></p>
-<p class="p3"><span class="s6">  </span><span class="s1">font-size</span><span class="s6">: </span><span class="s4">1vw</span><span class="s6">;</span></p>
-<p class="p1"><span class="s1">  }</span></p>
-<p class="p6"><span class="s6">  .</span><span class="s1">info </span><span class="s6">{</span></p>
-<p class="p3"><span class="s6">  </span><span class="s1">padding-left</span><span class="s6">: </span><span class="s4">15px</span><span class="s6">;</span></p>
-<p class="p1"><span class="s1">  }</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p3"><span class="s6">  .</span><span class="s9">col-1 </span><span class="s6">{</span><span class="s1">width</span><span class="s6">: </span><span class="s4">80%</span><span class="s6">; </span><span class="s1">margin-right</span><span class="s6">: </span><span class="s4">100%</span><span class="s6">;}</span></p>
-<p class="p1"><span class="s1">  .</span><span class="s9">col-2 </span><span class="s1">{</span><span class="s2">width</span><span class="s1">: </span><span class="s4">92%</span><span class="s1">;}</span></p>
-<p class="p1"><span class="s1">  .</span><span class="s9">col-3 </span><span class="s1">{</span><span class="s2">width</span><span class="s1">: </span><span class="s4">15%</span><span class="s1">;}</span></p>
-<p class="p3"><span class="s6">  .</span><span class="s9">col-4 </span><span class="s6">{</span><span class="s1">width</span><span class="s6">: </span><span class="s4">100%</span><span class="s6">; </span><span class="s1">margin-bottom</span><span class="s6">: </span><span class="s4">50px</span><span class="s6">; </span><span class="s1">margin-right</span><span class="s6">: </span><span class="s4">100%</span><span class="s6">;}</span></p>
-<p class="p1"><span class="s1">  .</span><span class="s9">col-5 </span><span class="s1">{</span><span class="s2">width</span><span class="s1">: </span><span class="s4">70%</span><span class="s1">;}</span></p>
-<p class="p3"><span class="s6">  .</span><span class="s9">col-6 </span><span class="s6">{</span><span class="s1">width</span><span class="s6">: </span><span class="s4">70%</span><span class="s6">; </span><span class="s1">margin-bottom</span><span class="s6">: </span><span class="s4">350px</span><span class="s6">; </span><span class="s1">margin-right</span><span class="s6">: </span><span class="s4">100%</span><span class="s6">;}</span></p>
-<p class="p1"><span class="s1">  .</span><span class="s9">col-7 </span><span class="s1">{</span><span class="s2">width</span><span class="s1">: </span><span class="s4">18%</span><span class="s1">;}</span></p>
-<p class="p1"><span class="s1">  .</span><span class="s9">col-8 </span><span class="s1">{</span><span class="s2">width</span><span class="s1">: </span><span class="s4">45%</span><span class="s1">;}</span></p>
-<p class="p1"><span class="s1">  .</span><span class="s9">col-9 </span><span class="s1">{</span><span class="s2">width</span><span class="s1">: </span><span class="s4">100%</span><span class="s1">;}</span></p>
-<p class="p1"><span class="s1">  .</span><span class="s9">col-10 </span><span class="s1">{</span><span class="s2">width</span><span class="s1">:</span><span class="s4">100%</span><span class="s1">;}</span></p>
-<p class="p1"><span class="s1">  .</span><span class="s9">col-11 </span><span class="s1">{</span><span class="s2">width</span><span class="s1">: </span><span class="s4">100%</span><span class="s1">;}</span></p>
-<p class="p1"><span class="s1">  .</span><span class="s9">col-12 </span><span class="s1">{</span><span class="s2">width</span><span class="s1">: </span><span class="s4">10%</span><span class="s1">;}</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p7"><span class="s1">@media </span><span class="s2">print </span><span class="s6">{</span></p>
-<p class="p1"><span class="s1">    .</span><span class="s9">main </span><span class="s1">{</span></p>
-<p class="p1"><span class="s1">        </span><span class="s2">overflow</span><span class="s1">: </span><span class="s7">visible</span><span class="s1">;</span></p>
-<p class="p1"><span class="s1">    }</span></p>
-<p class="p6"><span class="s6">    .</span><span class="s1">menuframe </span><span class="s6">{</span></p>
-<p class="p1"><span class="s1">    </span><span class="s2">display</span><span class="s1">: </span><span class="s7">none</span><span class="s1">;</span></p>
-<p class="p1"><span class="s1">    }</span></p>
-<p class="p6"><span class="s6">    </span><span class="s1">html</span><span class="s6">, </span><span class="s1">body </span><span class="s6">{</span></p>
-<p class="p1"><span class="s1">        </span><span class="s2">overflow</span><span class="s1">: </span><span class="s7">visible</span><span class="s1">;</span></p>
-<p class="p3"><span class="s6">  </span><span class="s1">position</span><span class="s6">: </span><span class="s7">relative</span><span class="s6">;</span></p>
-<p class="p1"><span class="s1">    }</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p2"><span class="s2">&lt;/</span><span class="s1">style</span><span class="s2">&gt;</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p8"><span class="s1">&lt;!-- Mathjax --&gt;</span></p>
-<p class="p5"><span class="s6">    </span><span class="s2">&lt;</span><span class="s3">script </span><span class="s5">src</span><span class="s2">=</span><span class="s1">"https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_HTML"</span><span class="s2">&gt;&lt;/</span><span class="s3">script</span><span class="s2">&gt;</span></p>
-<p class="p5"><span class="s6">    </span><span class="s2">&lt;</span><span class="s3">script </span><span class="s5">type</span><span class="s2">=</span><span class="s1">"text/x-mathjax-config"</span><span class="s2">&gt;</span></p>
-<p class="p3"><span class="s6">    </span><span class="s1">MathJax</span><span class="s6">.</span><span class="s1">Hub</span><span class="s6">.</span><span class="s1">Config</span><span class="s6">({</span></p>
-<p class="p1"><span class="s1">        </span><span class="s2">tex2jax</span><span class="s1">: {</span></p>
-<p class="p1"><span class="s1">            </span><span class="s2">inlineMath</span><span class="s1">: [ [</span><span class="s10">'$'</span><span class="s1">,</span><span class="s10">'$'</span><span class="s1">], [</span><span class="s10">"\\("</span><span class="s1">,</span><span class="s10">"\\)"</span><span class="s1">] ],</span></p>
-<p class="p1"><span class="s1">            </span><span class="s2">displayMath</span><span class="s1">: [ [</span><span class="s10">'$$'</span><span class="s1">,</span><span class="s10">'$$'</span><span class="s1">], [</span><span class="s10">"\\["</span><span class="s1">,</span><span class="s10">"\\]"</span><span class="s1">] ],</span></p>
-<p class="p1"><span class="s1">            </span><span class="s2">processEscapes</span><span class="s1">: </span><span class="s4">true</span><span class="s1">,</span></p>
-<p class="p3"><span class="s6">            </span><span class="s1">processEnvironments</span><span class="s6">: </span><span class="s4">true</span></p>
-<p class="p1"><span class="s1">        },</span></p>
-<p class="p8"><span class="s6">        </span><span class="s1">// Center justify equations in code and markdown cells. Elsewhere</span></p>
-<p class="p8"><span class="s6">        </span><span class="s1">// we use CSS to left justify single line equations in code cells.</span></p>
-<p class="p3"><span class="s6">        </span><span class="s1">displayAlign</span><span class="s6">: </span><span class="s10">'center'</span><span class="s6">,</span></p>
-<p class="p1"><span class="s1">        </span><span class="s10">"HTML-CSS"</span><span class="s1">: {</span></p>
-<p class="p9"><span class="s6">            </span><span class="s2">styles</span><span class="s6">: {</span><span class="s1">'.MathJax_Display'</span><span class="s6">: {</span><span class="s1">"margin"</span><span class="s6">: </span><span class="s4">0</span><span class="s6">}},</span></p>
-<p class="p1"><span class="s1">            </span><span class="s2">linebreaks</span><span class="s1">: { </span><span class="s2">automatic</span><span class="s1">: </span><span class="s4">true </span><span class="s1">}</span></p>
-<p class="p1"><span class="s1">        }</span></p>
-<p class="p1"><span class="s1">    });</span></p>
-<p class="p2"><span class="s6">    </span><span class="s2">&lt;/</span><span class="s1">script</span><span class="s2">&gt;</span></p>
-<p class="p8"><span class="s1">&lt;!-- Mathjax --&gt;</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p2"><span class="s2">&lt;/</span><span class="s1">head</span><span class="s2">&gt;</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p2"><span class="s2">&lt;</span><span class="s1">body</span><span class="s2">&gt;</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p5"><span class="s2">&lt;</span><span class="s3">div </span><span class="s5">class</span><span class="s2">=</span><span class="s1">"col-3 menuframe"</span><span class="s2">&gt;</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p5"><span class="s6">  </span><span class="s2">&lt;</span><span class="s3">a </span><span class="s5">href</span><span class="s2">=</span><span class="s1">“shrikantchand.github.io </span><span class="s5">style</span><span class="s2">=</span><span class="s1">"color: black"</span><span class="s2">&gt;</span></p>
-<p class="p5"><span class="s6">    </span><span class="s2">&lt;</span><span class="s3">div </span><span class="s5">class</span><span class="s2">=</span><span class="s1">"col-2 menu"</span><span class="s2">&gt;</span></p>
-<p class="p1"><span class="s1">      </span><span class="s2">Home</span></p>
-<p class="p1"><span class="s1">    </span><span class="s2">&lt;/</span><span class="s3">div</span><span class="s2">&gt;</span></p>
-<p class="p3"><span class="s6">  </span><span class="s1">&lt;/</span><span class="s3">a</span><span class="s1">&gt;</span></p>
-<p class="p10"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p5"><span class="s6">  </span><span class="s2">&lt;</span><span class="s3">a </span><span class="s5">href</span><span class="s2">=</span><span class="s1">"#research" </span><span class="s5">style</span><span class="s2">=</span><span class="s1">"color: black"</span><span class="s2">&gt;</span></p>
-<p class="p5"><span class="s6">    </span><span class="s2">&lt;</span><span class="s3">div </span><span class="s5">class</span><span class="s2">=</span><span class="s1">"col-2 menu"</span><span class="s2">&gt;</span></p>
-<p class="p3"><span class="s6">      </span><span class="s1">Research</span></p>
-<p class="p1"><span class="s1">    </span><span class="s2">&lt;/</span><span class="s3">div</span><span class="s2">&gt;</span></p>
-<p class="p3"><span class="s6">  </span><span class="s1">&lt;/</span><span class="s3">a</span><span class="s1">&gt;</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p5"><span class="s6">  </span><span class="s2">&lt;</span><span class="s3">a </span><span class="s5">href</span><span class="s2">=</span><span class="s1">"#teaching" </span><span class="s5">style</span><span class="s2">=</span><span class="s1">"color: black"</span><span class="s2">&gt;</span></p>
-<p class="p5"><span class="s6">    </span><span class="s2">&lt;</span><span class="s3">div </span><span class="s5">class</span><span class="s2">=</span><span class="s1">"col-2 menu"</span><span class="s2">&gt;</span></p>
-<p class="p3"><span class="s6">      </span><span class="s1">Teaching</span></p>
-<p class="p1"><span class="s1">    </span><span class="s2">&lt;/</span><span class="s3">div</span><span class="s2">&gt;</span></p>
-<p class="p3"><span class="s6">  </span><span class="s1">&lt;/</span><span class="s3">a</span><span class="s1">&gt;</span></p>
-<p class="p8"><span class="s2">&lt;/</span><span class="s3">div</span><span class="s2">&gt; </span><span class="s1">&lt;!-- menuframe --&gt;</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p5"><span class="s6">  </span><span class="s2">&lt;</span><span class="s3">div </span><span class="s5">class</span><span class="s2">=</span><span class="s1">"col-5 main"</span><span class="s2">&gt;</span></p>
-<p class="p5"><span class="s6">    </span><span class="s2">&lt;</span><span class="s3">div </span><span class="s5">class</span><span class="s2">=</span><span class="s1">"col-11 namecol"</span><span class="s2">&gt;</span></p>
-<p class="p5"><span class="s6">      </span><span class="s2">&lt;</span><span class="s3">div </span><span class="s5">class</span><span class="s2">=</span><span class="s1">"col-7 photoframe"</span><span class="s2">&gt;</span></p>
-<p class="p5"><span class="s6">          </span><span class="s2">&lt;</span><span class="s3">img </span><span class="s5">class</span><span class="s2">=</span><span class="s1">"photo" </span><span class="s5">src</span><span class="s2">=</span><span class="s1">"SChand.jpg" </span><span class="s5">alt</span><span class="s2">=</span><span class="s1">"Shrikant Chand"</span><span class="s2">&gt;</span></p>
-<p class="p8"><span class="s6">      </span><span class="s2">&lt;/</span><span class="s3">div</span><span class="s2">&gt; </span><span class="s1">&lt;!-- photoframe --&gt;</span></p>
-<p class="p5"><span class="s6">      </span><span class="s2">&lt;</span><span class="s3">div </span><span class="s5">class</span><span class="s2">=</span><span class="s1">"col-8 info"</span><span class="s2">&gt;</span></p>
-<p class="p3"><span class="s6">        </span><span class="s1">&lt;</span><span class="s3">h1</span><span class="s1">&gt;Shrikant Chand &lt;/</span><span class="s3">h1</span><span class="s1">&gt;</span></p>
-<p class="p1"><span class="s1">        </span><span class="s2">&lt;</span><span class="s3">ul </span><span class="s5">class</span><span class="s2">=</span><span class="s4">"ul-1"</span><span class="s2">&gt;</span></p>
-<p class="p3"><span class="s6">          </span><span class="s1">&lt;</span><span class="s3">li</span><span class="s1">&gt;&lt;</span><span class="s3">b</span><span class="s1">&gt;Contact:&lt;/</span><span class="s3">b</span><span class="s1">&gt;  shrikant.chand@duke.edu&lt;/</span><span class="s3">li</span><span class="s1">&gt;</span></p>
-<p class="p3"><span class="s6">          </span><span class="s1">&lt;</span><span class="s3">li</span><span class="s1">&gt;&lt;</span><span class="s3">b</span><span class="s1">&gt;Office:&lt;/</span><span class="s3">b</span><span class="s1">&gt;  Gross Hall 304, Desk 55&lt;/</span><span class="s3">li</span><span class="s1">&gt;</span></p>
-<p class="p1"><span class="s1">        </span><span class="s2">&lt;/</span><span class="s3">ul</span><span class="s2">&gt;</span></p>
-<p class="p8"><span class="s6">      </span><span class="s2">&lt;/</span><span class="s3">div</span><span class="s2">&gt; </span><span class="s1">&lt;!-- info --&gt;</span></p>
-<p class="p8"><span class="s6">    </span><span class="s2">&lt;/</span><span class="s3">div</span><span class="s2">&gt; </span><span class="s1">&lt;!--namecol--&gt;</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p5"><span class="s6">  </span><span class="s2">&lt;</span><span class="s3">div </span><span class="s5">class</span><span class="s2">=</span><span class="s1">"datetag"</span><span class="s2">&gt;</span></p>
-<p class="p3"><span class="s6">    </span><span class="s1">Last updated: Aug 2022</span></p>
-<p class="p2"><span class="s6">  </span><span class="s2">&lt;/</span><span class="s1">div</span><span class="s2">&gt;</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p5"><span class="s6">  </span><span class="s2">&lt;</span><span class="s3">div </span><span class="s5">class</span><span class="s2">=</span><span class="s1">"col-9"</span><span class="s2">&gt;</span></p>
-<p class="p2"><span class="s2">&lt;</span><span class="s1">br</span><span class="s2">&gt;</span></p>
-<p class="p3"><span class="s1">&lt;</span><span class="s3">h2</span><span class="s1">&gt;Bio&lt;/</span><span class="s3">h2</span><span class="s1">&gt;</span></p>
-<p class="p5"><span class="s6">  </span><span class="s2">&lt;</span><span class="s3">table </span><span class="s5">class</span><span class="s2">=</span><span class="s1">"col-1"</span><span class="s2">&gt;</span></p>
-<p class="p1"><span class="s1">    </span><span class="s2">&lt;</span><span class="s3">tr</span><span class="s2">&gt;</span></p>
-<p class="p3"><span class="s6">      </span><span class="s1">&lt;</span><span class="s3">td</span><span class="s1">&gt;Aug 2022 - Present&lt;/</span><span class="s3">td</span><span class="s1">&gt;</span></p>
-<p class="p3"><span class="s6">      </span><span class="s1">&lt;</span><span class="s3">td</span><span class="s1">&gt;PhD Mathematics&lt;/</span><span class="s3">td</span><span class="s1">&gt;</span></p>
-<p class="p3"><span class="s6">      </span><span class="s1">&lt;</span><span class="s3">td</span><span class="s1">&gt;Duke University&lt;/</span><span class="s3">td</span><span class="s1">&gt;</span></p>
-<p class="p1"><span class="s1">    </span><span class="s2">&lt;/</span><span class="s3">tr</span><span class="s2">&gt;</span></p>
-<p class="p1"><span class="s1">    </span><span class="s2">&lt;</span><span class="s3">tr</span><span class="s2">&gt;</span></p>
-<p class="p3"><span class="s6">      </span><span class="s1">&lt;</span><span class="s3">td</span><span class="s1">&gt;Sep 2020 - May 2022&lt;/</span><span class="s3">td</span><span class="s1">&gt;</span></p>
-<p class="p3"><span class="s6">      </span><span class="s1">&lt;</span><span class="s3">td</span><span class="s1">&gt;MS Mathematics&lt;/</span><span class="s3">td</span><span class="s1">&gt;</span></p>
-<p class="p3"><span class="s6">      </span><span class="s1">&lt;</span><span class="s3">td</span><span class="s1">&gt;NYU Courant Institute of Mathematical Sciences&lt;/</span><span class="s3">td</span><span class="s1">&gt;</span></p>
-<p class="p1"><span class="s1">    </span><span class="s2">&lt;/</span><span class="s3">tr</span><span class="s2">&gt;</span></p>
-<p class="p1"><span class="s1">    </span><span class="s2">&lt;</span><span class="s3">tr</span><span class="s2">&gt;</span></p>
-<p class="p3"><span class="s6">      </span><span class="s1">&lt;</span><span class="s3">td</span><span class="s1">&gt;Sep 2018 - May 2022&lt;/</span><span class="s3">td</span><span class="s1">&gt;</span></p>
-<p class="p3"><span class="s6">      </span><span class="s1">&lt;</span><span class="s3">td</span><span class="s1">&gt;BS Mathematics&lt;/</span><span class="s3">td</span><span class="s1">&gt;</span></p>
-<p class="p3"><span class="s6">      </span><span class="s1">&lt;</span><span class="s3">td</span><span class="s1">&gt;NYU Tandon School of Engineering&lt;/</span><span class="s3">td</span><span class="s1">&gt;</span></p>
-<p class="p1"><span class="s1">    </span><span class="s2">&lt;/</span><span class="s3">tr</span><span class="s2">&gt;</span></p>
-<p class="p2"><span class="s6">  </span><span class="s2">&lt;/</span><span class="s1">table</span><span class="s2">&gt;</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p5"><span class="s6">   </span><span class="s2">&lt;</span><span class="s3">hr </span><span class="s5">id</span><span class="s2">=</span><span class="s1">"research"</span><span class="s2">&gt;</span></p>
-<p class="p3"><span class="s6">   </span><span class="s1">&lt;</span><span class="s3">h2</span><span class="s1">&gt; Research &lt;/</span><span class="s3">h2</span><span class="s1">&gt;</span></p>
-<p class="p3"><span class="s6">   </span><span class="s1">&lt;</span><span class="s3">h3</span><span class="s1">&gt;Interests&lt;/</span><span class="s3">h3</span><span class="s1">&gt;</span></p>
-<p class="p3"><span class="s6"> </span><span class="s1">I study math and a bit of computer science. I am interested in probability, computational statistics, numerical linear algebra, and</span></p>
-<p class="p3"><span class="s6">    </span><span class="s1">high dimensional statistics for applications in machine learning and signal processing algorithms.</span></p>
-<p class="p5"><span class="s2">&lt;</span><span class="s3">ul </span><span class="s5">class</span><span class="s2">=</span><span class="s1">"ul-4"</span><span class="s2">&gt;</span></p>
-<p class="p3"><span class="s6">  </span><span class="s1">&lt;</span><span class="s3">li</span><span class="s1">&gt; Randomized numerical linear algebra &lt;/</span><span class="s3">li</span><span class="s1">&gt;</span></p>
-<p class="p3"><span class="s6">  </span><span class="s1">&lt;</span><span class="s3">li</span><span class="s1">&gt; Hierarchical matrices and applications in kernel methods, e.g., Gaussian processes &lt;/</span><span class="s3">li</span><span class="s1">&gt;             </span></p>
-<p class="p3"><span class="s6">  </span><span class="s1">&lt;</span><span class="s3">li</span><span class="s1">&gt; Markov chain Monte Carlo &lt;/</span><span class="s3">li</span><span class="s1">&gt;</span></p>
-<p class="p3"><span class="s6">  </span><span class="s1">&lt;</span><span class="s3">li</span><span class="s1">&gt; Interacting particle systems &lt;/</span><span class="s3">li</span><span class="s1">&gt;</span></p>
-<p class="p3"><span class="s1">&lt;/</span><span class="s3">ul</span><span class="s1">&gt;</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p3"><span class="s6">  </span><span class="s1">&lt;</span><span class="s3">h3</span><span class="s1">&gt;Publications&lt;/</span><span class="s3">h3</span><span class="s1">&gt;</span></p>
-<p class="p2"><span class="s2">&lt;</span><span class="s1">ul</span><span class="s2">&gt;</span></p>
-<p class="p5"><span class="s6">      </span><span class="s2">&lt;</span><span class="s3">li</span><span class="s2">&gt;&lt;</span><span class="s3">a </span><span class="s5">href</span><span class="s2">=</span><span class="s1">"https://arxiv.org/abs/2204.10287"</span><span class="s2">&gt;</span></p>
-<p class="p3"><span class="s6">            </span><span class="s1">Quasistationary distribution for the invasion model on a complete bipartite graph &lt;/</span><span class="s3">a</span><span class="s1">&gt;&lt;/</span><span class="s3">li</span><span class="s1">&gt;</span></p>
-<p class="p1"><span class="s1">   </span><span class="s2">&lt;/</span><span class="s3">ul</span><span class="s2">&gt;</span></p>
-<p class="p1"><span class="s1">   </span><span class="s2">&lt;</span><span class="s3">br</span><span class="s2">&gt;</span></p>
-<p class="p1"><span class="s1">        </span></p>
-<p class="p3"><span class="s6">  </span><span class="s1">&lt;</span><span class="s3">h3</span><span class="s1">&gt;Projects&lt;/</span><span class="s3">h3</span><span class="s1">&gt;</span></p>
-<p class="p2"><span class="s2">&lt;</span><span class="s1">ul</span><span class="s2">&gt;</span></p>
-<p class="p5"><span class="s6">      </span><span class="s2">&lt;</span><span class="s3">li</span><span class="s2">&gt;&lt;</span><span class="s3">a </span><span class="s5">href</span><span class="s2">=</span><span class="s1">"https://drive.google.com/file/d/1a4zRg3A9jjU-nLAYisg90YtmFGPkVyMn/view?usp=sharing"</span><span class="s2">&gt;</span></p>
-<p class="p3"><span class="s6">            </span><span class="s1">Fast Gaussian process regression via low-rank approximations &lt;/</span><span class="s3">a</span><span class="s1">&gt;&lt;/</span><span class="s3">li</span><span class="s1">&gt;</span></p>
-<p class="p1"><span class="s1">   </span><span class="s2">&lt;/</span><span class="s3">ul</span><span class="s2">&gt;</span></p>
-<p class="p1"><span class="s1">   </span><span class="s2">&lt;</span><span class="s3">br</span><span class="s2">&gt;</span></p>
-<p class="p1"><span class="s1">    </span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p5"><span class="s6">    </span><span class="s2">&lt;</span><span class="s3">hr </span><span class="s5">id</span><span class="s2">=</span><span class="s1">"teaching"</span><span class="s2">&gt;</span></p>
-<p class="p1"><span class="s1">    </span><span class="s2">&lt;</span><span class="s3">br</span><span class="s2">&gt;</span></p>
-<p class="p3"><span class="s6">    </span><span class="s1">&lt;</span><span class="s3">h2</span><span class="s1">&gt;Teaching&lt;/</span><span class="s3">h2</span><span class="s1">&gt;</span></p>
-<p class="p5"><span class="s6">  </span><span class="s2">&lt;</span><span class="s3">table </span><span class="s5">class</span><span class="s2">=</span><span class="s1">"col-6"</span><span class="s2">&gt;</span></p>
-<p class="p1"><span class="s1">    </span><span class="s2">&lt;</span><span class="s3">tr</span><span class="s2">&gt;</span></p>
-<p class="p3"><span class="s6">      </span><span class="s1">&lt;</span><span class="s3">td</span><span class="s1">&gt;&lt;</span><span class="s3">b</span><span class="s1">&gt;Role&lt;/</span><span class="s3">b</span><span class="s1">&gt;&lt;/</span><span class="s3">td</span><span class="s1">&gt;</span></p>
-<p class="p3"><span class="s6">      </span><span class="s1">&lt;</span><span class="s3">td</span><span class="s1">&gt;&lt;</span><span class="s3">b</span><span class="s1">&gt;Course&lt;/</span><span class="s3">b</span><span class="s1">&gt;&lt;/</span><span class="s3">td</span><span class="s1">&gt;</span></p>
-<p class="p3"><span class="s6">      </span><span class="s1">&lt;</span><span class="s3">td</span><span class="s1">&gt;&lt;</span><span class="s3">b</span><span class="s1">&gt;Number&lt;/</span><span class="s3">b</span><span class="s1">&gt;&lt;/</span><span class="s3">td</span><span class="s1">&gt;</span></p>
-<p class="p3"><span class="s6">      </span><span class="s1">&lt;</span><span class="s3">td</span><span class="s1">&gt;&lt;</span><span class="s3">b</span><span class="s1">&gt;Term&lt;/</span><span class="s3">b</span><span class="s1">&gt;&lt;/</span><span class="s3">td</span><span class="s1">&gt;</span></p>
-<p class="p3"><span class="s6">      </span><span class="s1">&lt;</span><span class="s3">td</span><span class="s1">&gt;&lt;</span><span class="s3">b</span><span class="s1">&gt;Institute&lt;/</span><span class="s3">b</span><span class="s1">&gt;&lt;/</span><span class="s3">td</span><span class="s1">&gt;</span></p>
-<p class="p1"><span class="s1">    </span><span class="s2">&lt;/</span><span class="s3">tr</span><span class="s2">&gt;</span></p>
-<p class="p1"><span class="s1">    </span><span class="s2">&lt;</span><span class="s3">tr</span><span class="s2">&gt;</span></p>
-<p class="p3"><span class="s6">      </span><span class="s1">&lt;</span><span class="s3">td</span><span class="s1">&gt; TA &lt;/</span><span class="s3">td</span><span class="s1">&gt;</span></p>
-<p class="p3"><span class="s6">      </span><span class="s1">&lt;</span><span class="s3">td</span><span class="s1">&gt; Laboratory Calculus I&lt;/</span><span class="s3">td</span><span class="s1">&gt;</span></p>
-<p class="p3"><span class="s6">      </span><span class="s1">&lt;</span><span class="s3">td</span><span class="s1">&gt; MATH 111L&lt;/</span><span class="s3">td</span><span class="s1">&gt;</span></p>
-<p class="p3"><span class="s6">      </span><span class="s1">&lt;</span><span class="s3">td</span><span class="s1">&gt; Fa 2022 &lt;/</span><span class="s3">td</span><span class="s1">&gt;</span></p>
-<p class="p3"><span class="s6">      </span><span class="s1">&lt;</span><span class="s3">td</span><span class="s1">&gt; Duke &lt;/</span><span class="s3">td</span><span class="s1">&gt;</span></p>
-<p class="p1"><span class="s1">    </span><span class="s2">&lt;/</span><span class="s3">tr</span><span class="s2">&gt;</span></p>
-<p class="p1"><span class="s1">    </span><span class="s2">&lt;</span><span class="s3">tr</span><span class="s2">&gt;</span></p>
-<p class="p3"><span class="s6">      </span><span class="s1">&lt;</span><span class="s3">td</span><span class="s1">&gt; TA &lt;/</span><span class="s3">td</span><span class="s1">&gt;</span></p>
-<p class="p3"><span class="s6">      </span><span class="s1">&lt;</span><span class="s3">td</span><span class="s1">&gt; Applied Statistics&lt;/</span><span class="s3">td</span><span class="s1">&gt;</span></p>
-<p class="p3"><span class="s6">      </span><span class="s1">&lt;</span><span class="s3">td</span><span class="s1">&gt; MA-UY 4114&lt;/</span><span class="s3">td</span><span class="s1">&gt;</span></p>
-<p class="p3"><span class="s6">      </span><span class="s1">&lt;</span><span class="s3">td</span><span class="s1">&gt; Sp 2022 &lt;/</span><span class="s3">td</span><span class="s1">&gt;</span></p>
-<p class="p3"><span class="s6">      </span><span class="s1">&lt;</span><span class="s3">td</span><span class="s1">&gt; NYU &lt;/</span><span class="s3">td</span><span class="s1">&gt;</span></p>
-<p class="p1"><span class="s1">    </span><span class="s2">&lt;/</span><span class="s3">tr</span><span class="s2">&gt;</span></p>
-<p class="p1"><span class="s1">    </span><span class="s2">&lt;</span><span class="s3">tr</span><span class="s2">&gt;</span></p>
-<p class="p3"><span class="s6">      </span><span class="s1">&lt;</span><span class="s3">td</span><span class="s1">&gt; TA &lt;/</span><span class="s3">td</span><span class="s1">&gt;</span></p>
-<p class="p3"><span class="s6">      </span><span class="s1">&lt;</span><span class="s3">td</span><span class="s1">&gt; Applied Partial Differential Equations&lt;/</span><span class="s3">td</span><span class="s1">&gt;</span></p>
-<p class="p3"><span class="s6">      </span><span class="s1">&lt;</span><span class="s3">td</span><span class="s1">&gt; MA-UY 4414&lt;/</span><span class="s3">td</span><span class="s1">&gt;</span></p>
-<p class="p3"><span class="s6">      </span><span class="s1">&lt;</span><span class="s3">td</span><span class="s1">&gt; Sp 2022 &lt;/</span><span class="s3">td</span><span class="s1">&gt;</span></p>
-<p class="p3"><span class="s6">      </span><span class="s1">&lt;</span><span class="s3">td</span><span class="s1">&gt; NYU &lt;/</span><span class="s3">td</span><span class="s1">&gt;</span></p>
-<p class="p1"><span class="s1">    </span><span class="s2">&lt;/</span><span class="s3">tr</span><span class="s2">&gt;</span></p>
-<p class="p1"><span class="s1">    </span><span class="s2">&lt;</span><span class="s3">tr</span><span class="s2">&gt;</span></p>
-<p class="p3"><span class="s6">      </span><span class="s1">&lt;</span><span class="s3">td</span><span class="s1">&gt; Grader &lt;/</span><span class="s3">td</span><span class="s1">&gt;</span></p>
-<p class="p3"><span class="s6">      </span><span class="s1">&lt;</span><span class="s3">td</span><span class="s1">&gt; Machine Learning (GR)&lt;/</span><span class="s3">td</span><span class="s1">&gt;</span></p>
-<p class="p3"><span class="s6">      </span><span class="s1">&lt;</span><span class="s3">td</span><span class="s1">&gt; ECE-GY 6143&lt;/</span><span class="s3">td</span><span class="s1">&gt;</span></p>
-<p class="p3"><span class="s6">      </span><span class="s1">&lt;</span><span class="s3">td</span><span class="s1">&gt; Fa 2021 &lt;/</span><span class="s3">td</span><span class="s1">&gt;</span></p>
-<p class="p3"><span class="s6">      </span><span class="s1">&lt;</span><span class="s3">td</span><span class="s1">&gt; NYU &lt;/</span><span class="s3">td</span><span class="s1">&gt;</span></p>
-<p class="p1"><span class="s1">    </span><span class="s2">&lt;/</span><span class="s3">tr</span><span class="s2">&gt;</span></p>
-<p class="p1"><span class="s1">    </span><span class="s2">&lt;</span><span class="s3">tr</span><span class="s2">&gt;</span></p>
-<p class="p3"><span class="s6">      </span><span class="s1">&lt;</span><span class="s3">td</span><span class="s1">&gt; Grader &lt;/</span><span class="s3">td</span><span class="s1">&gt;</span></p>
-<p class="p3"><span class="s6">      </span><span class="s1">&lt;</span><span class="s3">td</span><span class="s1">&gt; Multivariable Calculus&lt;/</span><span class="s3">td</span><span class="s1">&gt;</span></p>
-<p class="p3"><span class="s6">      </span><span class="s1">&lt;</span><span class="s3">td</span><span class="s1">&gt; MA-UY 2114&lt;/</span><span class="s3">td</span><span class="s1">&gt;</span></p>
-<p class="p3"><span class="s6">      </span><span class="s1">&lt;</span><span class="s3">td</span><span class="s1">&gt; Sp 2021 &lt;/</span><span class="s3">td</span><span class="s1">&gt;</span></p>
-<p class="p3"><span class="s6">      </span><span class="s1">&lt;</span><span class="s3">td</span><span class="s1">&gt; NYU &lt;/</span><span class="s3">td</span><span class="s1">&gt;</span></p>
-<p class="p1"><span class="s1">    </span><span class="s2">&lt;/</span><span class="s3">tr</span><span class="s2">&gt;</span></p>
-<p class="p1"><span class="s1">    </span><span class="s2">&lt;</span><span class="s3">tr</span><span class="s2">&gt;</span></p>
-<p class="p3"><span class="s6">      </span><span class="s1">&lt;</span><span class="s3">td</span><span class="s1">&gt; Grader &lt;/</span><span class="s3">td</span><span class="s1">&gt;</span></p>
-<p class="p3"><span class="s6">      </span><span class="s1">&lt;</span><span class="s3">td</span><span class="s1">&gt; Multivariable Calculus&lt;/</span><span class="s3">td</span><span class="s1">&gt;</span></p>
-<p class="p3"><span class="s6">      </span><span class="s1">&lt;</span><span class="s3">td</span><span class="s1">&gt; MA-UY 2114&lt;/</span><span class="s3">td</span><span class="s1">&gt;</span></p>
-<p class="p3"><span class="s6">      </span><span class="s1">&lt;</span><span class="s3">td</span><span class="s1">&gt; Fa 2020 &lt;/</span><span class="s3">td</span><span class="s1">&gt;</span></p>
-<p class="p3"><span class="s6">      </span><span class="s1">&lt;</span><span class="s3">td</span><span class="s1">&gt; NYU &lt;/</span><span class="s3">td</span><span class="s1">&gt;</span></p>
-<p class="p1"><span class="s1">    </span><span class="s2">&lt;/</span><span class="s3">tr</span><span class="s2">&gt;</span></p>
-<p class="p2"><span class="s6">  </span><span class="s2">&lt;/</span><span class="s1">table</span><span class="s2">&gt;</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p1"><span class="s1">    </span><span class="s2">&lt;/</span><span class="s3">div</span><span class="s2">&gt;</span></p>
-<p class="p2"><span class="s6">  </span><span class="s2">&lt;/</span><span class="s1">div</span><span class="s2">&gt;</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p2"><span class="s2">&lt;/</span><span class="s1">body</span><span class="s2">&gt;</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
+
+
+
+<div class="col-3 menuframe">
+
+
+
+  <a href=“shrikantchand.github.io style="color: black">
+
+    <div class="col-2 menu">
+
+      Home
+
+    </div>
+
+  </a>
+
+
+
+
+
+
+
+  <a href="#research" style="color: black">
+
+    <div class="col-2 menu">
+
+      Research
+
+    </div>
+
+  </a>
+
+
+
+  <a href="#teaching" style="color: black">
+
+    <div class="col-2 menu">
+
+      Teaching
+
+    </div>
+
+  </a>
+
+</div> <!-- menuframe -->
+
+
+
+  <div class="col-5 main">
+
+    <div class="col-11 namecol">
+
+      <div class="col-7 photoframe">
+
+          <img class="photo" src="SChand.jpg" alt="Shrikant Chand">
+
+      </div> <!-- photoframe -->
+
+      <div class="col-8 info">
+
+        <h1>Shrikant Chand </h1>
+
+        <ul class="ul-1">
+
+          <li><b>Contact:</b>  shrikant.chand@duke.edu</li>
+
+          <li><b>Office:</b>  Gross Hall 304, Desk 55</li>
+
+        </ul>
+
+      </div> <!-- info -->
+
+    </div> <!--namecol-->
+
+
+
+  <div class="datetag">
+
+    Last updated: Aug 2022
+
+  </div>
+
+
+
+  <div class="col-9">
+
+<br>
+
+<h2>Bio</h2>
+
+  <table class="col-1">
+
+    <tr>
+
+      <td>Aug 2022 - Present</td>
+
+      <td>PhD Mathematics</td>
+
+      <td>Duke University</td>
+
+    </tr>
+
+    <tr>
+
+      <td>Sep 2020 - May 2022</td>
+
+      <td>MS Mathematics</td>
+
+      <td>NYU Courant Institute of Mathematical Sciences</td>
+
+    </tr>
+
+    <tr>
+
+      <td>Sep 2018 - May 2022</td>
+
+      <td>BS Mathematics</td>
+
+      <td>NYU Tandon School of Engineering</td>
+
+    </tr>
+
+  </table>
+
+
+
+
+
+   <hr id="research">
+
+   <h2> Research </h2>
+
+   <h3>Interests</h3>
+
+ I study math and a bit of computer science. I am interested in probability, computational statistics, numerical linear algebra, and
+
+    high dimensional statistics for applications in machine learning and signal processing algorithms.
+
+<ul class="ul-4">
+
+  <li> Randomized numerical linear algebra </li>
+
+  <li> Hierarchical matrices and applications in kernel methods, e.g., Gaussian processes </li>             
+
+  <li> Markov chain Monte Carlo </li>
+
+  <li> Interacting particle systems </li>
+
+</ul>
+
+
+
+  <h3>Publications</h3>
+
+<ul>
+
+      <li><a href="https://arxiv.org/abs/2204.10287">
+
+            Quasistationary distribution for the invasion model on a complete bipartite graph </a></li>
+
+   </ul>
+
+   <br>
+
+        
+
+  <h3>Projects</h3>
+
+<ul>
+
+      <li><a href="https://drive.google.com/file/d/1a4zRg3A9jjU-nLAYisg90YtmFGPkVyMn/view?usp=sharing">
+
+            Fast Gaussian process regression via low-rank approximations </a></li>
+
+   </ul>
+
+   <br>
+
+    
+
+
+
+
+
+    <hr id="teaching">
+
+    <br>
+
+    <h2>Teaching</h2>
+
+  <table class="col-6">
+
+    <tr>
+
+      <td><b>Role</b></td>
+
+      <td><b>Course</b></td>
+
+      <td><b>Number</b></td>
+
+      <td><b>Term</b></td>
+
+      <td><b>Institute</b></td>
+
+    </tr>
+
+    <tr>
+
+      <td> TA </td>
+
+      <td> Laboratory Calculus I</td>
+
+      <td> MATH 111L</td>
+
+      <td> Fa 2022 </td>
+
+      <td> Duke </td>
+
+    </tr>
+
+    <tr>
+
+      <td> TA </td>
+
+      <td> Applied Statistics</td>
+
+      <td> MA-UY 4114</td>
+
+      <td> Sp 2022 </td>
+
+      <td> NYU </td>
+
+    </tr>
+
+    <tr>
+
+      <td> TA </td>
+
+      <td> Applied Partial Differential Equations</td>
+
+      <td> MA-UY 4414</td>
+
+      <td> Sp 2022 </td>
+
+      <td> NYU </td>
+
+    </tr>
+
+    <tr>
+
+      <td> Grader </td>
+
+      <td> Machine Learning (GR)</td>
+
+      <td> ECE-GY 6143</td>
+
+      <td> Fa 2021 </td>
+
+      <td> NYU </td>
+
+    </tr>
+
+    <tr>
+
+      <td> Grader </td>
+
+      <td> Multivariable Calculus</td>
+
+      <td> MA-UY 2114</td>
+
+      <td> Sp 2021 </td>
+
+      <td> NYU </td>
+
+    </tr>
+
+    <tr>
+
+      <td> Grader </td>
+
+      <td> Multivariable Calculus</td>
+
+      <td> MA-UY 2114</td>
+
+      <td> Fa 2020 </td>
+
+      <td> NYU </td>
+
+    </tr>
+
+  </table>
+
+
+
+    </div>
+
+  </div>
+
+
+
+
+
 </body>
-</html>
+
